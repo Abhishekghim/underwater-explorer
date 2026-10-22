@@ -1,0 +1,22 @@
+<svg width="220" height="160" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" fill="none">
+  <defs>
+    <linearGradient id="lion-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f3b50"/>
+      <stop offset="65%" stop-color="#122432"/>
+      <stop offset="100%" stop-color="#08141d"/>
+    </linearGradient>
+  </defs>
+  <!-- Dramatic venomous dorsal spines -->
+  <path d="M60 70 L45 20 M75 65 L68 12 M90 62 L88 8 M105 60 L108 8 M120 62 L128 14 M135 65 L148 24" stroke="#2b536f" stroke-width="2" stroke-linecap="round"/>
+  <!-- Pectoral fan rays -->
+  <path d="M130 90 C110 125 90 145 75 140 C85 125 105 105 120 85 Z" fill="#152b3a" opacity="0.75" stroke="#366585" stroke-width="1"/>
+  <!-- Tail fin -->
+  <path d="M35 80 C18 60 6 62 2 68 C8 80 8 80 2 92 C6 98 18 100 35 80 Z" fill="#0d1b25"/>
+  <!-- Body -->
+  <path d="M185 80 C170 58 135 52 100 54 C65 56 45 68 35 80 C45 92 65 104 100 106 C135 108 170 102 185 80 Z" fill="url(#lion-body)"/>
+  <!-- Silhouette banding -->
+  <path d="M125 56 C120 70 120 90 125 104 C120 104 115 90 115 80 C115 70 120 56 125 56 Z" fill="#00d4ff" opacity="0.3"/>
+  <!-- Eye -->
+  <circle cx="162" cy="72" r="3.2" fill="#04090d"/>
+  <circle cx="163" cy="71.2" r="1.1" fill="#65b7eb"/>
+</svg>

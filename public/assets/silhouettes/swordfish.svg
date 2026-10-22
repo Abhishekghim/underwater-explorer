@@ -1,0 +1,20 @@
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
+  <defs>
+    <linearGradient id="sword-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c394e"/>
+      <stop offset="65%" stop-color="#112330"/>
+      <stop offset="100%" stop-color="#07131b"/>
+    </linearGradient>
+  </defs>
+  <!-- Massive sword bill (rostrum) -->
+  <path d="M225 60 L298 59 L225 61 Z" fill="#254a64" stroke="#366687" stroke-width="1.2"/>
+  <!-- Crescent tail -->
+  <path d="M40 60 C22 25 5 15 2 18 C12 45 12 75 2 102 C5 105 22 95 40 60 Z" fill="#0c1922" stroke="#264c66" stroke-width="1.2"/>
+  <!-- High curved sail-like first dorsal fin -->
+  <path d="M140 44 C148 12 155 8 158 10 C155 24 146 38 132 45 Z" fill="#142938"/>
+  <!-- Torpedo body -->
+  <path d="M230 60 C210 45 175 40 135 40 C85 40 55 52 40 60 C55 68 85 80 135 80 C175 80 210 75 230 60 Z" fill="url(#sword-body)"/>
+  <!-- Eye -->
+  <circle cx="212" cy="55" r="3.4" fill="#04090d"/>
+  <circle cx="213" cy="54.2" r="1.1" fill="#65b7eb"/>
+</svg>

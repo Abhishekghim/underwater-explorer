@@ -1,0 +1,19 @@
+<svg width="200" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <defs>
+    <linearGradient id="man-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d384c"/>
+      <stop offset="65%" stop-color="#112330"/>
+      <stop offset="100%" stop-color="#08141d"/>
+    </linearGradient>
+  </defs>
+  <!-- Flowing rounded fins -->
+  <path d="M30 60 C12 40 4 45 2 52 C6 60 6 60 2 68 C4 75 12 80 30 60 Z" fill="#0e1d27" stroke="#254a62" stroke-width="1"/>
+  <path d="M65 38 C75 18 105 18 115 38 Z" fill="#142a3a"/>
+  <!-- Rounded dragonet body -->
+  <path d="M175 60 C160 42 130 36 95 38 C60 40 40 50 30 60 C40 70 60 80 95 82 C130 84 160 78 175 60 Z" fill="url(#man-body)"/>
+  <!-- Ornamental wave markings -->
+  <path d="M135 48 C120 52 110 46 95 55 C85 62 105 68 125 64 Z" stroke="#00d4ff" stroke-width="1.2" opacity="0.35" fill="none"/>
+  <!-- Large curious eye -->
+  <circle cx="152" cy="52" r="3.6" fill="#04090d"/>
+  <circle cx="153" cy="51.2" r="1.3" fill="#65b7eb"/>
+</svg>

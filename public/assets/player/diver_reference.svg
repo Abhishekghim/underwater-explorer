@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" width="512" height="256">
+  <defs>
+    <linearGradient id="tankGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="50%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="maskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="torchGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Far Leg (Left Leg) -->
+  <g id="farLeg" opacity="0.85">
+    <!-- Thigh -->
+    <path d="M 170 135 C 145 130 115 125 90 120 C 85 125 85 133 90 136 C 115 140 145 144 170 142 Z" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+    <!-- Shin & Fin -->
+    <path d="M 90 120 C 70 112 50 108 30 106 C 15 104 2 95 -8 92 C 0 105 10 116 25 120 C 45 125 68 130 90 136 Z" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+  </g>
+
+  <!-- Near Leg (Right Leg) -->
+  <g id="nearLeg">
+    <!-- Thigh -->
+    <path d="M 170 138 C 145 145 115 152 90 156 C 85 152 85 144 90 140 C 115 136 145 132 170 135 Z" fill="#1f2937" stroke="#374151" stroke-width="1.5"/>
+    <!-- Shin & Fin -->
+    <path d="M 90 156 C 68 162 48 166 28 170 C 12 174 -2 182 -12 188 C -2 176 10 162 25 156 C 45 150 68 145 90 140 Z" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+  </g>
+
+  <!-- Torso & Hips -->
+  <path d="M 165 145 C 190 148 230 145 260 138 C 275 134 290 125 305 115 C 300 102 285 95 265 95 C 235 95 195 108 170 125 C 160 132 160 140 165 145 Z" fill="url(#suitGrad)" stroke="#4b5563" stroke-width="1.5"/>
+
+  <!-- Yellow Scuba Cylinder (Tank) on back -->
+  <g id="scubaTank">
+    <!-- Tank body -->
+    <rect x="195" y="78" width="85" height="24" rx="10" transform="rotate(-6 195 78)" fill="url(#tankGrad)" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Tank bands -->
+    <rect x="215" y="77" width="6" height="25" transform="rotate(-6 195 78)" fill="#0f172a" opacity="0.8"/>
+    <rect x="255" y="75" width="6" height="25" transform="rotate(-6 195 78)" fill="#0f172a" opacity="0.8"/>
+    <!-- Tank Valve & Regulator Manifold -->
+    <rect x="186" y="86" width="10" height="9" rx="2" transform="rotate(-6 195 78)" fill="#94a3b8"/>
+    <path d="M 190 92 Q 220 115 285 112" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Head & Scuba Mask -->
+  <g id="head">
+    <!-- Neoprene Hood Head -->
+    <ellipse cx="305" cy="112" rx="18" ry="16" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <!-- Mask Frame & Visor -->
+    <path d="M 314 104 C 322 105 325 110 324 116 C 323 120 318 122 312 121 Z" fill="#0f172a" stroke="#0284c7" stroke-width="2"/>
+    <!-- Glass Highlight -->
+    <path d="M 315 107 C 321 108 322 112 321 116 C 319 118 316 119 314 118 Z" fill="url(#maskGrad)"/>
+    <!-- Regulator Mouthpiece -->
+    <rect x="310" y="118" width="8" height="7" rx="2" fill="#0f172a"/>
+  </g>
+
+  <!-- Trailing Arm -->
+  <path d="M 240 120 C 220 128 200 135 180 136 C 176 136 175 132 178 130 C 195 125 215 118 235 112 Z" fill="#1f2937" opacity="0.7"/>
+
+  <!-- Forward Arm holding Dive Torch -->
+  <g id="forwardArm">
+    <!-- Shoulder, Upper arm and Forearm -->
+    <path d="M 268 116 C 295 120 325 125 350 127 C 354 127 355 122 352 120 C 330 115 300 108 275 105 Z" fill="#1f2937" stroke="#4b5563" stroke-width="1.5"/>
+    <!-- Glove -->
+    <ellipse cx="355" cy="125" rx="6" ry="5" fill="#111827"/>
+    <!-- Dive Torch / Flashlight Body -->
+    <rect x="350" y="120" width="24" height="8" rx="2" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <!-- Torch Bezel / Lens -->
+    <path d="M 374 118 L 378 116 L 378 132 L 374 130 Z" fill="#e2e8f0"/>
+    <ellipse cx="378" cy="124" rx="2.5" ry="7" fill="url(#torchGlow)"/>
+  </g>
+</svg>
+

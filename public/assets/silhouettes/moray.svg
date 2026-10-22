@@ -1,0 +1,18 @@
+<svg width="280" height="110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 110" fill="none">
+  <defs>
+    <linearGradient id="mor-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3548"/>
+      <stop offset="65%" stop-color="#10222f"/>
+      <stop offset="100%" stop-color="#07121b"/>
+    </linearGradient>
+  </defs>
+  <!-- Long sinuous continuous dorsal/anal fin ridge -->
+  <path d="M10 55 C40 35 100 32 180 34 C220 35 245 42 260 48 L255 58 C220 48 180 44 100 44 C40 44 15 55 10 55 Z" fill="#142838"/>
+  <!-- Sinuous serpentine body -->
+  <path d="M272 54 C265 48 245 44 210 46 C160 48 110 58 70 56 C40 54 20 58 4 56 C15 64 35 68 70 66 C110 64 160 62 210 60 C245 62 265 62 272 54 Z" fill="url(#mor-body)"/>
+  <!-- Distinctive agape predatory jaw -->
+  <path d="M260 54 L276 50 M260 56 L274 60" stroke="#061017" stroke-width="2"/>
+  <!-- Eye -->
+  <circle cx="254" cy="49" r="2.6" fill="#04080c"/>
+  <circle cx="255" cy="48.4" r="0.9" fill="#65b7eb"/>
+</svg>

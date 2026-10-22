@@ -1,0 +1,20 @@
+<svg width="180" height="240" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" fill="none">
+  <defs>
+    <linearGradient id="bell-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e465d" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#122a3a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#081722" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <!-- Bioluminescent inner organs -->
+  <circle cx="90" cy="55" r="18" fill="#00d4ff" opacity="0.35"/>
+  <circle cx="90" cy="55" r="8" fill="#7fdcff" opacity="0.6"/>
+  <!-- Translucent umbrella bell -->
+  <path d="M150 75 C150 30 125 15 90 15 C55 15 30 30 30 75 C45 70 60 76 75 72 C90 76 105 72 120 76 C135 70 145 74 150 75 Z" fill="url(#bell-glow)" stroke="#00d4ff" stroke-width="1.4" stroke-opacity="0.6"/>
+  <!-- Trailing undulating tentacles with bioluminescent nodes -->
+  <path d="M55 75 C50 110 65 150 55 190 C50 210 58 230 55 240" stroke="#00d4ff" stroke-width="1.4" stroke-opacity="0.4" fill="none"/>
+  <path d="M75 75 C80 120 68 160 80 200 C85 220 76 235 80 240" stroke="#7fdcff" stroke-width="1.8" stroke-opacity="0.6" fill="none"/>
+  <path d="M90 75 C95 115 88 155 92 195 C90 215 95 230 92 240" stroke="#00d4ff" stroke-width="2.2" stroke-opacity="0.7" fill="none"/>
+  <path d="M105 75 C100 120 112 160 100 200 C95 220 104 235 100 240" stroke="#7fdcff" stroke-width="1.8" stroke-opacity="0.6" fill="none"/>
+  <path d="M125 75 C130 110 115 150 125 190 C130 210 122 230 125 240" stroke="#00d4ff" stroke-width="1.4" stroke-opacity="0.4" fill="none"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="200" height="130" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" fill="none">
+  <defs>
+    <linearGradient id="cf-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a4d"/>
+      <stop offset="60%" stop-color="#122432"/>
+      <stop offset="100%" stop-color="#08141c"/>
+    </linearGradient>
+  </defs>
+  <!-- Tail fin -->
+  <path d="M35 65 C15 45 5 42 2 50 C8 65 8 72 2 82 C5 90 15 88 35 70 Z" fill="#0d1b24" stroke="#254a62" stroke-width="1.2"/>
+  <!-- Dorsal fin -->
+  <path d="M70 42 C85 24 120 22 135 44 Z" fill="#132734" stroke="#2a526d" stroke-width="1"/>
+  <!-- Pectoral fin -->
+  <path d="M125 72 C110 88 95 92 90 85 C92 78 110 70 125 72 Z" fill="#152b39" opacity="0.8"/>
+  <!-- Body -->
+  <path d="M185 65 C175 42 145 35 110 36 C75 37 45 52 35 65 C45 78 75 93 110 94 C145 95 175 88 185 65 Z" fill="url(#cf-body)"/>
+  <!-- Elegant silhouette body bands (dark translucent with cyan trim) -->
+  <path d="M145 38 C140 50 140 80 145 92 C140 92 134 85 134 65 C134 45 140 38 145 38 Z" fill="#2d556e" opacity="0.45"/>
+  <path d="M102 36 C96 50 96 80 102 94 C97 94 91 85 91 65 C91 45 97 36 102 36 Z" fill="#2d556e" opacity="0.45"/>
+  <path d="M52 54 C48 60 48 70 52 76 C49 76 46 72 46 65 C46 58 49 54 52 54 Z" fill="#2d556e" opacity="0.45"/>
+  <!-- Eye -->
+  <circle cx="165" cy="58" r="3" fill="#050a0e"/>
+  <circle cx="166" cy="57.5" r="1.1" fill="#65b7eb"/>
+</svg>

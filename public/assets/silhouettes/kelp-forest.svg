@@ -1,0 +1,45 @@
+<svg width="120" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 400" fill="none">
+  <defs>
+    <linearGradient id="kelp-stem" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0e3a35"/>
+      <stop offset="60%" stop-color="#19544c"/>
+      <stop offset="100%" stop-color="#2a7a6e"/>
+    </linearGradient>
+    <linearGradient id="kelp-blade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#246e63" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#349486" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4fd4c1" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central Stipe (Stem) -->
+  <path d="M60 400 C62 340 54 280 64 220 C74 160 52 100 62 0" stroke="url(#kelp-stem)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Blade 1 (Left, low) -->
+  <ellipse cx="52" cy="350" rx="3.5" ry="3.5" fill="#1b5a51"/> <!-- Pneumatocyst -->
+  <path d="M52 350 C30 340 10 320 4 300 C15 315 35 330 52 348 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Blade 2 (Right, mid-low) -->
+  <ellipse cx="64" cy="305" rx="3.5" ry="3.5" fill="#1b5a51"/>
+  <path d="M64 305 C90 295 110 270 116 245 C102 268 85 285 64 302 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Blade 3 (Left, mid) -->
+  <ellipse cx="58" cy="250" rx="3.5" ry="3.5" fill="#1e665c"/>
+  <path d="M58 250 C32 235 12 210 6 185 C20 205 40 225 58 248 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Blade 4 (Right, mid-high) -->
+  <ellipse cx="68" cy="190" rx="3.5" ry="3.5" fill="#206f64"/>
+  <path d="M68 190 C95 175 114 148 118 120 C104 145 88 168 68 188 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Blade 5 (Left, high) -->
+  <ellipse cx="58" cy="130" rx="3.2" ry="3.2" fill="#247c70"/>
+  <path d="M58 130 C35 115 18 90 12 65 C24 85 42 108 58 128 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Blade 6 (Right, top) -->
+  <ellipse cx="60" cy="70" rx="3" ry="3" fill="#28897c"/>
+  <path d="M60 70 C80 55 98 35 102 12 C90 32 76 52 60 68 Z" fill="url(#kelp-blade)"/>
+
+  <!-- Terminal Frond -->
+  <path d="M62 10 C58 -5 66 -18 64 -30 C68 -15 68 0 62 10 Z" fill="url(#kelp-blade)"/>
+</svg>
+

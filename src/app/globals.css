@@ -1,0 +1,990 @@
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+
+  /* ── Ocean palette (from portfolio/css/theme.css) ── */
+  --sky-top:    #87ceeb;
+  --sky-mid:    #4ba8d0;
+  --sea-surf:   #1a6b8a;
+  --sea-shallow:#0d4a68;
+  --sea-mid:    #082440;
+  --sea-deep:   #041428;
+  --sea-abyss:  #000000;
+  --sea-void:   #000000;
+
+  /* ── Accent & glow ── */
+  --glow:       #00d4ff;
+  --glow-warm:  #7fdcff;
+  --glow-dim:   rgba(0, 212, 255, 0.18);
+  --jelly-glow: rgba(180, 120, 255, 0.85);
+  --bio-cyan:   rgba(0, 255, 210, 0.9);
+  --bio-violet: rgba(180, 80, 255, 0.9);
+  --accent:     #ff6b35;
+  --gold:       #ffc94a;
+
+  /* ── Text ── */
+  --t-bright:   rgba(255, 255, 255, 1.0);
+  --t-mid:      rgba(255, 255, 255, 0.95);
+  --t-dim:      rgba(255, 255, 255, 0.85);
+  --t-faint:    rgba(255, 255, 255, 0.65);
+
+  /* ── Glass panels ── */
+  --glass-bg:   rgba(3, 18, 34, 0.62);
+  --glass-bd:   rgba(0, 212, 255, 0.24);
+  --glass-blur: 10px;
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', system-ui, sans-serif;
+  --font-hand:    'Caveat', cursive;
+
+  /* ── Layout ── */
+  --nav-h: 62px;
+  --max-w: 1080px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #020617;
+  color: var(--t-bright);
+  overflow: hidden;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PORTFOLIO NAVBAR (from portfolio/css/nav.css)
+═══════════════════════════════════════════════════════════════════════════ */
+#portfolio-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-h);
+  z-index: 900;
+  background: rgba(1, 10, 20, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.14);
+  transition: background 0.35s, border-color 0.35s;
+}
+
+#portfolio-navbar.at-surface {
+  background: rgba(8, 36, 60, 0.28);
+  backdrop-filter: blur(10px);
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+}
+
+.pf-nav-inner {
+  height: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pf-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.pf-nav-brand svg {
+  color: var(--glow);
+}
+
+.pf-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pf-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.73rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+  padding: 7px 14px;
+  border-radius: 30px;
+  position: relative;
+  transition: color 0.25s, background 0.25s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pf-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1.5px;
+  background: var(--glow);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.pf-nav-link:hover,
+.pf-nav-link.active {
+  color: rgba(255, 255, 255, 0.98);
+  background: rgba(0, 212, 255, 0.12);
+}
+
+.pf-nav-link.active::after,
+.pf-nav-link:hover::after {
+  width: 50%;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PORTFOLIO RIGHT-SIDE DEPTH HUD (from portfolio/css/components.css)
+═══════════════════════════════════════════════════════════════════════════ */
+#pf-depth-hud {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 890;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+#pf-depth-label {
+  font-family: var(--font-hand);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(0, 212, 255, 0.65);
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+#pf-depth-bar-track {
+  width: 4px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#pf-depth-bar-fill {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--sky-top), var(--glow), #003366);
+  border-radius: 3px;
+  transition: height 0.14s;
+}
+
+#pf-depth-readout {
+  font-family: var(--font-hand);
+  font-size: 13px;
+  color: rgba(0, 212, 255, 0.85);
+  letter-spacing: 0.1em;
+}
+
+#pf-depth-zone {
+  font-family: var(--font-hand);
+  font-size: 10px;
+  color: rgba(0, 212, 255, 0.55);
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   WORLD-SPACE PORTFOLIO STATIONS LAYER
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-world-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.pf-station-node {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: center center;
+  will-change: transform;
+  pointer-events: auto;
+}
+
+/* ── Glass panels & headings (from portfolio/css/layout.css) ── */
+.pf-glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-bd);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-radius: 16px;
+  box-shadow: 0 12px 42px rgba(0, 0, 0, 0.52), 0 0 28px rgba(0, 212, 255, 0.08);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.pf-glass-panel:hover {
+  border-color: rgba(0, 212, 255, 0.48);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65), 0 0 36px rgba(0, 212, 255, 0.18);
+}
+
+.pf-section-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.pf-depth-badge {
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  color: var(--glow);
+  opacity: 0.9;
+  letter-spacing: 0.18em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.pf-section-title {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t-bright);
+  line-height: 1.1;
+  margin: 0;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.pf-section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1.5px;
+  background: linear-gradient(to right, transparent, var(--glow), transparent);
+  margin: 10px auto 0;
+}
+
+.pf-section-sub {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--t-dim);
+  text-transform: uppercase;
+  margin: 4px 0 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SURFACE HERO (from portfolio/index.html #home & layout.css)
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 680px;
+  padding: 16px 24px;
+}
+
+.pf-hero-badge {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  color: #042f44;
+  background: rgba(255, 255, 255, 0.52);
+  padding: 3px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.pf-hero-name {
+  font-family: var(--font-display);
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 0.90;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-shadow: 0 0 60px rgba(14, 116, 144, 0.75), 0 4px 28px rgba(3, 28, 48, 0.68);
+  margin: 6px 0 14px;
+}
+
+.pf-name-line {
+  display: block;
+}
+
+.pf-hero-title {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(2, 24, 42, 0.85);
+  margin: 0 0 12px;
+}
+
+.pf-hero-tagline {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 14px rgba(2, 22, 38, 0.92);
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 0 22px;
+}
+
+.pf-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pf-btn {
+  display: inline-block;
+  padding: 11px 28px;
+  border-radius: 40px;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+  cursor: pointer;
+}
+
+.pf-btn-primary {
+  background: rgba(3, 28, 48, 0.72);
+  border: 1.5px solid var(--glow);
+  color: var(--glow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pf-btn-primary:hover {
+  background: rgba(0, 212, 255, 0.24);
+  color: #ffffff;
+  box-shadow: 0 0 28px rgba(0, 212, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+.pf-btn-ghost {
+  background: rgba(3, 28, 48, 0.58);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.pf-btn-ghost:hover {
+  background: rgba(3, 28, 48, 0.82);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pf-scroll-cue {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  animation: pfCueFloat 2.8s ease-in-out infinite;
+}
+
+.pf-scroll-chevron {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pf-scroll-chevron > div {
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid rgba(0, 212, 255, 0.85);
+  border-bottom: 1.5px solid rgba(0, 212, 255, 0.85);
+  transform: rotate(45deg);
+}
+
+@keyframes pfCueFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ABOUT ME CARDS (from portfolio/css/sections.css)
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-about-bio-card {
+  width: 620px;
+  padding: 34px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pf-about-intro {
+  font-family: var(--font-display);
+  font-size: 1.72rem;
+  font-weight: 400;
+  color: var(--t-bright);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.pf-about-intro strong {
+  color: var(--glow);
+  font-weight: 600;
+}
+
+.pf-about-p {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: var(--t-mid);
+  font-weight: 300;
+  margin: 0;
+}
+
+.pf-stats-row {
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 212, 255, 0.18);
+}
+
+.pf-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.pf-stat-n {
+  font-family: var(--font-display);
+  font-size: 2.45rem;
+  font-weight: 600;
+  color: var(--glow);
+  line-height: 1;
+}
+
+.pf-stat-l {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t-dim);
+}
+
+.pf-about-avatar-card {
+  width: 350px;
+  padding: 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.pf-avatar-wrap {
+  position: relative;
+  width: 146px;
+  height: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-avatar-ring-outer {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 212, 255, 0.28);
+  animation: pfAvatarSpin 22s linear infinite;
+}
+
+.pf-avatar-ring-inner {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 212, 255, 0.22);
+  animation: pfAvatarSpin 14s linear infinite reverse;
+}
+
+@keyframes pfAvatarSpin {
+  to { transform: rotate(360deg); }
+}
+
+.pf-avatar-core {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1.5px solid rgba(0, 212, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 32px rgba(0, 212, 255, 0.14);
+}
+
+.pf-avatar-core svg {
+  width: 90px;
+}
+
+.pf-facts-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pf-fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.96rem;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.12);
+  padding-bottom: 9px;
+}
+
+.pf-fact:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pf-fact-k {
+  color: var(--t-dim);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.pf-fact-v {
+  color: var(--t-bright);
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EDUCATION TIMELINE CARDS
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-tl-card {
+  width: 500px;
+  padding: 28px 32px 26px;
+}
+
+.pf-tl-year {
+  font-family: var(--font-hand);
+  font-size: 1.12rem;
+  color: var(--glow);
+  letter-spacing: 0.14em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pf-tl-degree {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--t-bright);
+  margin: 0 0 6px;
+}
+
+.pf-tl-school {
+  font-size: 0.94rem;
+  color: var(--t-mid);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+
+.pf-tl-desc {
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: var(--t-dim);
+  margin: 0 0 16px;
+}
+
+.pf-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pf-pills span {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(0, 212, 255, 0.32);
+  color: var(--glow);
+  background: rgba(0, 212, 255, 0.10);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SKILLS CARDS & JELLYFISH HINT
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-jelly-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border-radius: 30px;
+  background: rgba(0, 212, 255, 0.12);
+  border: 1px solid rgba(0, 212, 255, 0.36);
+  color: var(--glow);
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.18);
+}
+
+.pf-skill-cat {
+  width: 460px;
+  padding: 30px 32px;
+}
+
+.pf-skill-cat-h {
+  font-family: var(--font-display);
+  font-size: 1.48rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--t-bright);
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.22);
+}
+
+.pf-skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pf-skill-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pf-skill-name {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: var(--t-mid);
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.pf-skill-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pf-skill-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--glow), #0088cc);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.55);
+}
+
+.pf-skill-pct {
+  font-family: var(--font-hand);
+  font-size: 1.08rem;
+  color: var(--glow);
+  min-width: 44px;
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROJECT CARDS (from portfolio/css/sections.css)
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-proj-card {
+  width: 410px;
+  overflow: hidden;
+}
+
+.pf-proj-card:hover {
+  transform: translateY(-6px);
+}
+
+.pf-proj-thumb {
+  height: 148px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-proj-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 10, 20, 0.08), rgba(0, 10, 20, 0.68));
+}
+
+.pf-proj-body {
+  padding: 24px 26px 24px;
+}
+
+.pf-proj-num {
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: rgba(0, 212, 255, 0.25);
+  line-height: 1;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pf-proj-title {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--t-bright);
+  margin: 0 0 10px;
+}
+
+.pf-proj-desc {
+  font-size: 0.94rem;
+  line-height: 1.72;
+  color: var(--t-mid);
+  margin: 0 0 16px;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTACT ("THE DEEP END") CARDS
+═══════════════════════════════════════════════════════════════════════════ */
+.pf-contact-wrap {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.pf-contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.pf-contact-quote {
+  margin: 0;
+  padding: 22px 22px;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--t-mid);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pf-contact-quote em {
+  color: var(--glow);
+  font-style: italic;
+}
+
+.pf-avail-signal {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.70rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--t-dim);
+  font-weight: 300;
+}
+
+.pf-avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00e676;
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.7);
+  flex-shrink: 0;
+}
+
+.pf-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pf-c-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  cursor: pointer;
+}
+
+.pf-c-card:hover {
+  transform: translateY(-3px);
+}
+
+.pf-c-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.28);
+  background: rgba(0, 212, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--glow);
+  flex-shrink: 0;
+}
+
+.pf-c-card-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pf-c-card-lbl {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--glow);
+}
+
+.pf-c-card-val {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--t-mid);
+  font-weight: 300;
+}
+
+.pf-return-surface {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 24px;
+  border-radius: 40px;
+  border: 1.5px solid rgba(0, 212, 255, 0.38);
+  background: rgba(0, 212, 255, 0.10);
+  color: var(--t-bright);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.25s, border-color 0.25s, background 0.25s, color 0.25s;
+}
+
+.pf-return-surface:hover {
+  color: var(--glow);
+  border-color: rgba(0, 212, 255, 0.7);
+  background: rgba(0, 212, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOTTIE JELLYFISH & DARKNESS CANVAS (from portfolio/css/jellyfish.css & darkness.css)
+═══════════════════════════════════════════════════════════════════════════ */
+#darkness-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 40;
+}
+
+#layer-jellyfish {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.jelly {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  cursor: grab;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: 0;
+  transition: opacity 1.0s ease;
+  filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.55));
+}
+
+.jelly.visible {
+  opacity: 1;
+}
+
+.jelly.dragging {
+  cursor: grabbing;
+  transition: none;
+  filter: drop-shadow(0 0 28px rgba(0, 255, 220, 0.85));
+}
+
+.jelly svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

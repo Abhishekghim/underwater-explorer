@@ -1,0 +1,45 @@
+<svg width="420" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" fill="none">
+  <defs>
+    <linearGradient id="whale-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182e42"/>
+      <stop offset="60%" stop-color="#0f1d2b"/>
+      <stop offset="100%" stop-color="#060c12"/>
+    </linearGradient>
+    <linearGradient id="whale-belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4b6b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2f1fc" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pectoral Fin (Far side, angled downward) -->
+  <path d="M260 110 C240 135 220 160 200 170 C195 168 205 148 230 120 Z" fill="#09141f" opacity="0.7"/>
+
+  <!-- Main Body Silhouette -->
+  <!-- Head right, tail left -->
+  <path d="M400 86 C385 65 340 52 280 50 C230 48 180 54 130 68 C100 76 70 82 46 84 C40 70 28 62 10 58 C16 75 22 92 20 94 C14 98 4 114 2 130 C22 124 35 116 44 100 C70 96 110 98 140 106 C190 120 250 128 320 124 C370 120 405 106 414 96 C416 92 410 88 400 86 Z" fill="url(#whale-body)"/>
+
+  <!-- Dorsal Hump and Small Fin -->
+  <path d="M150 58 C145 50 136 48 132 54 C134 58 138 64 144 65 Z" fill="#182e42"/>
+
+  <!-- Ventral Pleats / Throat Grooves -->
+  <path d="M370 112 C340 118 290 120 240 118" stroke="#36658d" stroke-width="1.2" stroke-opacity="0.35"/>
+  <path d="M380 106 C345 114 285 116 230 112" stroke="#36658d" stroke-width="1.2" stroke-opacity="0.35"/>
+  <path d="M390 100 C350 108 290 110 235 106" stroke="#36658d" stroke-width="1.2" stroke-opacity="0.35"/>
+
+  <!-- Head Tubercles (sensory bumps on rostrum) -->
+  <circle cx="395" cy="80" r="1.8" fill="#447da8" opacity="0.5"/>
+  <circle cx="380" cy="74" r="1.8" fill="#447da8" opacity="0.5"/>
+  <circle cx="360" cy="68" r="1.8" fill="#447da8" opacity="0.5"/>
+  <circle cx="340" cy="62" r="1.8" fill="#447da8" opacity="0.5"/>
+
+  <!-- Eye -->
+  <circle cx="355" cy="88" r="2.2" fill="#04080d"/>
+  <circle cx="355.6" cy="87.5" r="0.7" fill="#88c5ef"/>
+
+  <!-- Pectoral Fin (Near side, long graceful wing with scalloped leading edge) -->
+  <path d="M290 105 C270 135 242 165 210 176 C204 174 212 154 246 122 C262 108 278 102 290 105 Z" fill="#1b344b"/>
+  <!-- Scallops/bumps on leading edge of pectoral fin -->
+  <circle cx="225" cy="165" r="1.4" fill="#5892be" opacity="0.4"/>
+  <circle cx="240" cy="150" r="1.4" fill="#5892be" opacity="0.4"/>
+</svg>
+

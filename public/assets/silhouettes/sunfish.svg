@@ -1,0 +1,20 @@
+<svg width="200" height="240" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <defs>
+    <linearGradient id="sun-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c374b"/>
+      <stop offset="65%" stop-color="#11222f"/>
+      <stop offset="100%" stop-color="#08141d"/>
+    </linearGradient>
+  </defs>
+  <!-- Tall dorsal rudder fin -->
+  <path d="M95 90 C90 35 110 10 115 6 C120 25 115 60 112 90 Z" fill="#142938"/>
+  <!-- Long ventral rudder fin -->
+  <path d="M95 150 C90 205 110 230 115 234 C120 215 115 180 112 150 Z" fill="#142938"/>
+  <!-- Clavus (pseudo-tail rudder flap) -->
+  <path d="M50 85 C35 95 32 120 32 120 C32 120 35 145 50 155 Z" fill="#0d1b25"/>
+  <!-- Massive circular disc body -->
+  <path d="M175 120 C165 85 140 78 105 82 C70 85 55 100 50 120 C55 140 70 155 105 158 C140 162 165 155 175 120 Z" fill="url(#sun-body)"/>
+  <!-- Eye -->
+  <circle cx="152" cy="112" r="3.6" fill="#04090d"/>
+  <circle cx="153" cy="111.2" r="1.1" fill="#65b7eb"/>
+</svg>

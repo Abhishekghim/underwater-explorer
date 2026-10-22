@@ -1,0 +1,42 @@
+<svg width="280" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120" fill="none">
+  <defs>
+    <linearGradient id="shark-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c384c"/>
+      <stop offset="65%" stop-color="#122432"/>
+      <stop offset="100%" stop-color="#0a151d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Far Pectoral Fin -->
+  <path d="M190 74 L175 92 L185 88 Z" fill="#0c1822" opacity="0.6"/>
+
+  <!-- Main Body Silhouette (Swimming Right) -->
+  <path d="M260 62 C240 50 200 44 165 44 C130 44 95 50 60 60 C40 64 25 65 14 62 C10 48 4 30 2 24 C10 40 18 56 16 64 C12 70 5 82 2 92 C14 86 26 78 35 68 C60 66 100 74 135 76 C170 78 215 76 250 68 C265 65 268 64 260 62 Z" fill="url(#shark-body)"/>
+
+  <!-- First Dorsal Fin (Iconic, tall, curved) -->
+  <path d="M152 45 C158 20 162 10 168 12 C166 22 158 38 140 45 Z" fill="#1c384c"/>
+
+  <!-- Second Dorsal Fin (Small, near tail) -->
+  <path d="M68 57 C72 50 75 48 78 49 C76 53 72 58 64 60 Z" fill="#152b3b"/>
+
+  <!-- Anal Fin (Underside near tail) -->
+  <path d="M62 67 C66 73 70 74 72 73 C70 70 66 68 60 66 Z" fill="#10212e"/>
+
+  <!-- Near Pectoral Fin (Large, swept back) -->
+  <path d="M185 70 C165 92 145 106 138 104 C140 96 158 82 178 72 Z" fill="#172e40"/>
+
+  <!-- Pelvic Fin -->
+  <path d="M105 74 C96 82 90 84 88 82 C90 78 98 75 106 74 Z" fill="#122432"/>
+
+  <!-- 5 Gill Slits -->
+  <line x1="202" y1="58" x2="200" y2="68" stroke="#376180" stroke-width="1.2" opacity="0.6"/>
+  <line x1="197" y1="58" x2="195" y2="68" stroke="#376180" stroke-width="1.2" opacity="0.6"/>
+  <line x1="192" y1="59" x2="190" y2="68" stroke="#376180" stroke-width="1.2" opacity="0.6"/>
+  <line x1="187" y1="60" x2="185" y2="67" stroke="#376180" stroke-width="1.2" opacity="0.6"/>
+  <line x1="182" y1="61" x2="180" y2="67" stroke="#376180" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Eye -->
+  <circle cx="238" cy="58" r="2.2" fill="#04080c"/>
+  <circle cx="238.6" cy="57.5" r="0.7" fill="#65b7eb"/>
+</svg>
+

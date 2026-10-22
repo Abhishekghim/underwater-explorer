@@ -1,0 +1,22 @@
+<svg width="120" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" fill="none">
+  <defs>
+    <linearGradient id="sea-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a4e"/>
+      <stop offset="60%" stop-color="#112432"/>
+      <stop offset="100%" stop-color="#07131b"/>
+    </linearGradient>
+  </defs>
+  <!-- Curled prehensile tail -->
+  <path d="M55 130 C58 155 45 180 30 185 C18 188 15 178 22 170 C28 162 38 166 38 172" stroke="#122634" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <!-- Crown / Coronet -->
+  <path d="M50 25 L56 16 L64 24 L70 18 L74 26 Z" fill="#193345"/>
+  <!-- Head & Snout -->
+  <path d="M50 25 C50 25 78 30 82 45 C84 50 98 52 102 54 C100 58 84 58 80 62 C74 72 65 75 58 75 Z" fill="url(#sea-body)"/>
+  <!-- Segmented Armored Body / Trunk -->
+  <path d="M58 75 C72 82 78 100 70 115 C64 125 58 130 55 130 C48 125 45 105 48 90 C50 82 54 78 58 75 Z" fill="url(#sea-body)"/>
+  <!-- Tiny dorsal fin -->
+  <path d="M44 95 C34 92 34 105 44 108 Z" fill="#1a3547" opacity="0.8"/>
+  <!-- Eye -->
+  <circle cx="68" cy="42" r="2.8" fill="#04080c"/>
+  <circle cx="69" cy="41.2" r="1.0" fill="#65b7eb"/>
+</svg>

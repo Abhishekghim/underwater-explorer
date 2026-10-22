@@ -1,0 +1,92 @@
+<svg width="120" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 180" fill="none">
+  <defs>
+    <linearGradient id="tank-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f5c227"/>
+      <stop offset="50%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#c99710"/>
+    </linearGradient>
+    <linearGradient id="wetsuit-torso" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="45%" stop-color="#1b364d"/>
+      <stop offset="100%" stop-color="#10202e"/>
+    </linearGradient>
+    <linearGradient id="fin-blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00aacc"/>
+      <stop offset="70%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0088aa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Whole Diver Group (Rotates dynamically around center 60, 75) -->
+  <g id="diver-root">
+
+    <!-- Scuba Tank (Mounted on back) -->
+    <rect x="34" y="52" width="16" height="44" rx="7" fill="url(#tank-body)" stroke="#8c6a08" stroke-width="1.2"/>
+    <!-- Tank Boot -->
+    <path d="M34 88 H50 V94 C50 96 48 98 46 98 H38 C36 98 34 96 34 94 Z" fill="#1c232a"/>
+    <!-- Tank Neck & Manifold Valve -->
+    <rect x="39" y="47" width="6" height="6" rx="1.5" fill="#a0b3c6"/>
+    <circle cx="42" cy="46" r="3.5" fill="#4f6375"/>
+    <!-- First Stage Regulator -->
+    <rect x="37" y="44" width="10" height="5" rx="1.5" fill="#71889c"/>
+
+    <!-- Regulator Low-Pressure Hose to Mouthpiece -->
+    <path d="M44 46 C52 42 62 44 64 50" stroke="#f5c227" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Left Leg & Fin (Behind / Left) -->
+    <g id="diver-fin-l" style="transform-origin: 50px 96px;">
+      <!-- Thigh -->
+      <path d="M46 96 L42 126 L52 126 L55 96 Z" fill="#122533"/>
+      <!-- Knee joint accent -->
+      <circle cx="47" cy="126" r="4" fill="#00d4ff" opacity="0.6"/>
+      <!-- Shin -->
+      <path d="M43 126 L38 148 L48 148 L51 126 Z" fill="#152b3c"/>
+      <!-- Fin Blade (Long hydrodynamic freediving / scuba blade) -->
+      <path d="M37 148 C34 162 26 174 22 180 C32 178 44 172 50 162 L48 148 Z" fill="url(#fin-blade)"/>
+      <path d="M35 152 L26 178" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    </g>
+
+    <!-- Torso and BCD Vest -->
+    <path d="M44 56 C44 54 48 52 60 52 C72 52 76 54 76 56 L73 98 C73 100 68 102 60 102 C52 102 47 100 47 98 Z" fill="url(#wetsuit-torso)"/>
+    <!-- BCD Harness Straps & Chest Buckle -->
+    <path d="M48 60 L54 94 M72 60 L66 94" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="56" y="70" width="8" height="4" rx="1" fill="#c7d4e0"/> <!-- Chest buckle -->
+
+    <!-- Right Leg & Fin (Front / Right) -->
+    <g id="diver-fin-r" style="transform-origin: 64px 96px;">
+      <!-- Thigh -->
+      <path d="M57 96 L60 126 L70 126 L68 96 Z" fill="#193347"/>
+      <circle cx="65" cy="126" r="4" fill="#00d4ff" opacity="0.6"/>
+      <!-- Shin -->
+      <path d="M60 126 L63 148 L73 148 L70 126 Z" fill="#1c394f"/>
+      <!-- Fin Blade -->
+      <path d="M62 148 C65 162 70 174 76 180 C74 174 76 166 84 156 L73 148 Z" fill="url(#fin-blade)"/>
+      <path d="M68 152 L74 178" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    </g>
+
+    <!-- Head, Hood & Panoramic Mask -->
+    <!-- Neoprene Hood -->
+    <ellipse cx="60" cy="40" rx="14" ry="15" fill="#122533"/>
+    <!-- Mask Frame -->
+    <rect x="58" y="34" width="17" height="11" rx="4" fill="#ff6b35"/>
+    <!-- Mask Glass (Reflective cyan) -->
+    <rect x="60" y="36" width="13" height="7" rx="2.5" fill="#69e3ff" fill-opacity="0.85"/>
+    <path d="M62 37 L65 41" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.75"/>
+    <!-- Snorkel / Regulator Second Stage Mouthpiece -->
+    <circle cx="67" cy="46" r="3.2" fill="#2d3a47"/>
+    <circle cx="67" cy="46" r="1.5" fill="#f5c227"/>
+
+    <!-- Arms and Dive Computer Watch -->
+    <!-- Left Arm forward reaching -->
+    <path d="M48 60 C42 68 38 74 36 82 C38 84 42 84 44 80 C47 74 52 68 54 62 Z" fill="#152b3c"/>
+    <!-- Right Arm forward with wrist computer -->
+    <path d="M72 60 C76 68 80 75 84 82 C86 80 86 76 82 72 C78 66 74 62 72 60 Z" fill="#1b364d"/>
+    <!-- Dive Computer on right wrist -->
+    <rect x="80" y="74" width="6" height="5" rx="1.2" fill="#0c1720"/>
+    <rect x="81" y="75" width="4" height="3" rx="0.5" fill="#00ffcc" opacity="0.85"/>
+
+    <!-- Exhaust Bubble Emitter Point -->
+    <circle id="diver-bubble-mouth" cx="68" cy="47" r="1.5" fill="#ffffff" opacity="0"/>
+  </g>
+</svg>
+

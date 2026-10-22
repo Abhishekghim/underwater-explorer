@@ -1,0 +1,23 @@
+<svg width="280" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120" fill="none">
+  <defs>
+    <linearGradient id="tuna-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f3e54"/>
+      <stop offset="60%" stop-color="#122533"/>
+      <stop offset="100%" stop-color="#07121a"/>
+    </linearGradient>
+  </defs>
+  <!-- Sickle Tail -->
+  <path d="M42 60 C24 28 6 12 2 15 C14 45 14 75 2 105 C6 108 24 92 42 60 Z" fill="#0d1b25" stroke="#254a62" stroke-width="1.2"/>
+  <!-- Dorsal sickle fin -->
+  <path d="M140 42 C152 18 162 12 165 15 C162 26 150 38 135 44 Z" fill="#162c3b"/>
+  <!-- Second dorsal & anal finlets -->
+  <path d="M95 44 L88 38 L84 45 L78 40 L74 46 Z" fill="#193345"/>
+  <path d="M95 76 L88 82 L84 75 L78 80 L74 74 Z" fill="#193345"/>
+  <!-- Hydrodynamic torpedo body -->
+  <path d="M265 60 C240 44 195 38 150 38 C95 38 55 52 42 60 C55 68 95 82 150 82 C195 82 240 76 265 60 Z" fill="url(#tuna-body)"/>
+  <!-- Pectoral fin swept back -->
+  <path d="M190 64 C165 68 140 78 135 75 C140 70 168 62 188 62 Z" fill="#122430"/>
+  <!-- Eye -->
+  <circle cx="238" cy="55" r="3.2" fill="#04090d"/>
+  <circle cx="239" cy="54.2" r="1.1" fill="#65b7eb"/>
+</svg>

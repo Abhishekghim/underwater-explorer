@@ -1,0 +1,59 @@
+<svg width="460" height="260" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" fill="none">
+  <defs>
+    <linearGradient id="wreck-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2c38"/>
+      <stop offset="60%" stop-color="#111c26"/>
+      <stop offset="100%" stop-color="#080e14"/>
+    </linearGradient>
+    <linearGradient id="iron-anchor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3c4c59"/>
+      <stop offset="100%" stop-color="#121820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fallen Tilted Mast & Rigging -->
+  <line x1="250" y1="180" x2="140" y2="35" stroke="#253545" stroke-width="7" stroke-linecap="round"/>
+  <!-- Broken cross-yard -->
+  <line x1="195" y1="108" x2="145" y2="145" stroke="#1d2a36" stroke-width="4.5"/>
+  <!-- Slack decayed rigging lines -->
+  <path d="M140 35 C175 75 220 125 240 180" stroke="#3d5266" stroke-width="1.2" opacity="0.6"/>
+  <path d="M170 70 C190 100 215 130 225 185" stroke="#3d5266" stroke-width="1" opacity="0.5"/>
+  <path d="M140 35 C110 80 90 130 80 185" stroke="#3d5266" stroke-width="1" opacity="0.4"/>
+
+  <!-- Main Hull Structure (Lying tilted on seabed) -->
+  <path d="M40 210 C80 195 180 190 320 200 C380 205 425 218 440 235 C420 250 80 250 30 240 C25 228 32 215 40 210 Z" fill="url(#wreck-wood)"/>
+
+  <!-- Raised Poop Deck / Stern Castle (Left side) -->
+  <path d="M40 210 L50 165 L125 170 L140 205 Z" fill="#182531"/>
+  <!-- Shattered cabin window frames -->
+  <rect x="62" y="174" width="12" height="15" stroke="#3d5266" stroke-width="1.5" fill="#0b1218"/>
+  <rect x="82" y="175" width="12" height="15" stroke="#3d5266" stroke-width="1.5" fill="#0b1218"/>
+  <rect x="102" y="177" width="12" height="15" stroke="#3d5266" stroke-width="1.5" fill="#0b1218"/>
+
+  <!-- Decayed Hull Ribs / Exposed Timber Frames where planks rotted away -->
+  <path d="M160 200 C156 168 170 148 184 145 C190 148 185 168 180 200" fill="#243442"/>
+  <path d="M205 200 C201 166 215 146 228 144 C234 147 230 166 225 200" fill="#243442"/>
+  <path d="M250 201 C246 166 260 146 272 144 C278 147 274 166 270 201" fill="#243442"/>
+  <path d="M295 202 C291 168 304 148 316 146 C322 148 318 168 314 202" fill="#243442"/>
+  <path d="M340 203 C336 172 348 152 358 150 C364 152 360 172 356 203" fill="#243442"/>
+  <path d="M380 205 C377 178 388 160 396 158 C400 160 398 178 395 205" fill="#243442"/>
+
+  <!-- Bow Stem & Cutwater (Right side) -->
+  <path d="M410 215 C430 200 445 175 450 160 C445 178 430 200 410 215 Z" fill="#2a3a48"/>
+
+  <!-- Ancient Iron Anchor fallen on seabed -->
+  <g transform="translate(360, 205) rotate(22)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="url(#iron-anchor)" stroke-width="4.5"/>
+    <line x1="-12" y1="8" x2="12" y2="8" stroke="url(#iron-anchor)" stroke-width="3"/> <!-- Stock -->
+    <circle cx="0" cy="-3" r="5" stroke="url(#iron-anchor)" stroke-width="2.5" fill="none"/> <!-- Ring -->
+    <path d="M-16 32 C-10 44 10 44 16 32" stroke="url(#iron-anchor)" stroke-width="4" fill="none"/> <!-- Flukes -->
+  </g>
+
+  <!-- Encrusted algae / bioluminescent barnacles -->
+  <circle cx="130" cy="195" r="2" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="175" cy="188" r="1.8" fill="#00ffcc" opacity="0.5"/>
+  <circle cx="265" cy="182" r="2.2" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="345" cy="190" r="1.6" fill="#00ffcc" opacity="0.5"/>
+  <circle cx="75" cy="225" r="2.5" fill="#00d4ff" opacity="0.7"/>
+</svg>
+

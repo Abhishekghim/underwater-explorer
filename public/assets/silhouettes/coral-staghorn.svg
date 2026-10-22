@@ -1,0 +1,41 @@
+<svg width="160" height="160" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="stag-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2a3d4d"/>
+      <stop offset="50%" stop-color="#3d6b8c"/>
+      <stop offset="100%" stop-color="#64aee0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central Stem -->
+  <path d="M80 160 C78 135 82 110 80 85" stroke="url(#stag-grad)" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Left Main Branch -->
+  <path d="M80 120 C65 105 45 95 38 70" stroke="url(#stag-grad)" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Sub-branches Left -->
+  <path d="M52 95 C40 85 28 80 20 60" stroke="url(#stag-grad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M42 78 C35 65 34 50 32 35" stroke="url(#stag-grad)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M38 70 C44 55 52 45 54 30" stroke="url(#stag-grad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Center Main Continuation -->
+  <path d="M80 85 C78 60 76 45 74 20" stroke="url(#stag-grad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M78 65 C85 50 88 40 90 22" stroke="url(#stag-grad)" stroke-width="3.8" stroke-linecap="round"/>
+
+  <!-- Right Main Branch -->
+  <path d="M80 110 C96 95 115 88 126 65" stroke="url(#stag-grad)" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Sub-branches Right -->
+  <path d="M102 90 C118 80 130 75 140 55" stroke="url(#stag-grad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M120 72 C126 58 128 44 130 28" stroke="url(#stag-grad)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M126 65 C118 52 114 42 112 25" stroke="url(#stag-grad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Glowing Polyps / Axial Corallites at branch tips -->
+  <circle cx="20" cy="58" r="3" fill="#8fe2ff"/>
+  <circle cx="32" cy="33" r="3" fill="#8fe2ff"/>
+  <circle cx="54" cy="28" r="3" fill="#8fe2ff"/>
+  <circle cx="74" cy="18" r="3" fill="#8fe2ff"/>
+  <circle cx="90" cy="20" r="3" fill="#8fe2ff"/>
+  <circle cx="112" cy="23" r="3" fill="#8fe2ff"/>
+  <circle cx="130" cy="26" r="3" fill="#8fe2ff"/>
+  <circle cx="140" cy="53" r="3" fill="#8fe2ff"/>
+</svg>
+

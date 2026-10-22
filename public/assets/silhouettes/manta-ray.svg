@@ -1,0 +1,33 @@
+<svg width="240" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none">
+  <defs>
+    <linearGradient id="manta-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#19374d"/>
+      <stop offset="50%" stop-color="#0f2231"/>
+      <stop offset="100%" stop-color="#061017"/>
+    </linearGradient>
+    <linearGradient id="manta-belly" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#568ea6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#7fc1db" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#568ea6" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Long whip-like tail -->
+  <path d="M70 90 C30 90 10 93 2 92" stroke="#09151e" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Pectoral Wings & Disc -->
+  <path d="M180 90 C160 62 135 25 110 4 C104 2 100 8 106 24 C116 52 110 75 75 88 C70 90 70 90 75 92 C110 105 116 128 106 156 C100 172 104 178 110 176 C135 155 160 118 180 90 Z" fill="url(#manta-body)"/>
+
+  <!-- Cephalic Horns / Lobes -->
+  <path d="M174 80 C186 78 200 75 204 78 C206 82 198 86 182 86 Z" fill="#132b3c"/>
+  <path d="M174 100 C186 102 200 105 204 102 C206 98 198 94 182 94 Z" fill="#132b3c"/>
+
+  <!-- Dorsal Shoulder Patches / Chevron Markings (classic manta identifier) -->
+  <path d="M150 78 C140 70 126 66 120 72 C126 78 138 82 148 83 Z" fill="#00d4ff" fill-opacity="0.25"/>
+  <path d="M150 102 C140 110 126 114 120 108 C126 102 138 98 148 97 Z" fill="#00d4ff" fill-opacity="0.25"/>
+
+  <!-- Ventral / Wing edge highlights -->
+  <path d="M110 6 C134 26 158 60 178 88" stroke="#00d4ff" stroke-width="1.2" stroke-opacity="0.35"/>
+  <path d="M110 174 C134 154 158 120 178 92" stroke="#00d4ff" stroke-width="1.2" stroke-opacity="0.35"/>
+</svg>
+

@@ -1,0 +1,21 @@
+<svg width="220" height="140" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none">
+  <defs>
+    <linearGradient id="tang-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d394e"/>
+      <stop offset="65%" stop-color="#112330"/>
+      <stop offset="100%" stop-color="#08141d"/>
+    </linearGradient>
+  </defs>
+  <!-- Tail fin (crescent) -->
+  <path d="M40 70 C20 40 5 35 2 40 C10 65 10 75 2 100 C5 105 20 100 40 70 Z" fill="#0d1b24" stroke="#2a536e" stroke-width="1.2"/>
+  <!-- Dorsal & Anal long fins -->
+  <path d="M75 35 C110 20 160 30 170 52 C150 42 105 38 75 35 Z" fill="#142938"/>
+  <path d="M80 105 C115 120 155 110 165 88 C145 98 105 102 80 105 Z" fill="#142938"/>
+  <!-- Oval flat body -->
+  <path d="M195 70 C185 45 155 32 115 32 C70 32 45 52 40 70 C45 88 70 108 115 108 C155 108 185 95 195 70 Z" fill="url(#tang-body)"/>
+  <!-- Signature Tang palette curve silhouette -->
+  <path d="M165 52 C130 45 90 55 75 70 C85 65 125 58 160 62 Z" fill="#00d4ff" opacity="0.3"/>
+  <!-- Eye -->
+  <circle cx="172" cy="62" r="3.2" fill="#04080c"/>
+  <circle cx="173" cy="61.5" r="1.1" fill="#65b7eb"/>
+</svg>

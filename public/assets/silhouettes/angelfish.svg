@@ -1,0 +1,23 @@
+<svg width="180" height="220" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220" fill="none">
+  <defs>
+    <linearGradient id="angel-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#213f56"/>
+      <stop offset="65%" stop-color="#122433"/>
+      <stop offset="100%" stop-color="#08141d"/>
+    </linearGradient>
+  </defs>
+  <!-- Elongated flowing dorsal fin -->
+  <path d="M95 90 C85 40 60 10 52 4 C64 22 88 65 92 90 Z" fill="#152b3a" stroke="#2d5671" stroke-width="1"/>
+  <!-- Elongated flowing anal fin -->
+  <path d="M95 130 C85 180 60 210 52 216 C64 198 88 155 92 130 Z" fill="#152b3a" stroke="#2d5671" stroke-width="1"/>
+  <!-- Tail fin -->
+  <path d="M35 110 C15 88 4 85 2 90 C8 110 8 110 2 130 C4 135 15 132 35 110 Z" fill="#0e1d28"/>
+  <!-- Diamond body -->
+  <path d="M165 110 C145 85 120 78 95 85 C65 92 45 102 35 110 C45 118 65 128 95 135 C120 142 145 135 165 110 Z" fill="url(#angel-body)"/>
+  <!-- Vertical silhouette banding -->
+  <path d="M115 86 C110 100 110 120 115 134 C110 134 106 120 106 110 C106 100 110 86 115 86 Z" fill="#00d4ff" opacity="0.25"/>
+  <path d="M78 94 C74 102 74 118 78 126 C75 126 71 118 71 110 C71 102 75 94 78 94 Z" fill="#00d4ff" opacity="0.25"/>
+  <!-- Eye -->
+  <circle cx="145" cy="105" r="3.2" fill="#050a0e"/>
+  <circle cx="146" cy="104.2" r="1.1" fill="#65b7eb"/>
+</svg>
